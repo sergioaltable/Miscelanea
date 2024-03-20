@@ -5592,70 +5592,70 @@
                         blockSubmit: true
                     }
                 },
-                builtInValidators: {
-                    email: {
-                        name: "Email",
-                        type: "shortcut",
-                        shortcut: "validemail"
-                    },
-                    validemail: {
-                        name: "Validemail",
-                        type: "regex",
-                        regex: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\.[A-Za-z]{2,4}",
-                        message: "Not a valid email address<!-- data-validator-validemail-message to override -->"
-                    },
-                    passwordagain: {
-                        name: "Passwordagain",
-                        type: "match",
-                        match: "password",
-                        message: "Does not match the given password<!-- data-validator-paswordagain-message to override -->"
-                    },
-                    positive: {
-                        name: "Positive",
-                        type: "shortcut",
-                        shortcut: "number,positivenumber"
-                    },
-                    negative: {
-                        name: "Negative",
-                        type: "shortcut",
-                        shortcut: "number,negativenumber"
-                    },
-                    number: {
-                        name: "Number",
-                        type: "regex",
-                        regex: "([+-]?\\\d+(\\\.\\\d*)?([eE][+-]?[0-9]+)?)?",
-                        message: "Must be a number<!-- data-validator-number-message to override -->"
-                    },
-                    integer: {
-                        name: "Integer",
-                        type: "regex",
-                        regex: "[+-]?\\\d+",
-                        message: "No decimal places allowed<!-- data-validator-integer-message to override -->"
-                    },
-                    positivenumber: {
-                        name: "Positivenumber",
-                        type: "min",
-                        min: 0,
-                        message: "Must be a positive number<!-- data-validator-positivenumber-message to override -->"
-                    },
-                    negativenumber: {
-                        name: "Negativenumber",
-                        type: "max",
-                        max: 0,
-                        message: "Must be a negative number<!-- data-validator-negativenumber-message to override -->"
-                    },
-                    required: {
-                        name: "Required",
-                        type: "required",
-                        message: "Este campo es requerido<!-- data-validator-required-message to override -->"
-                    },
-                    checkone: {
-                        name: "Checkone",
-                        type: "minchecked",
-                        minchecked: 1,
-                        message: "Check at least one option<!-- data-validation-checkone-message to override -->"
-                    }
-                }
+                //builtInValidators: {
+                //    email: {
+                //        name: "Email",
+                //        type: "shortcut",
+                //        shortcut: "validemail"
+                //    },
+                //    validemail: {
+                //        name: "Validemail",
+                //        type: "regex",
+                //        regex: "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\.[A-Za-z]{2,4}",
+                //        message: "Not a valid email address<!-- data-validator-validemail-message to override -->"
+                //    },
+                //    passwordagain: {
+                //        name: "Passwordagain",
+                //        type: "match",
+                //        match: "password",
+                //        message: "Does not match the given password<!-- data-validator-paswordagain-message to override -->"
+                //    },
+                //    positive: {
+                //        name: "Positive",
+                //        type: "shortcut",
+                //        shortcut: "number,positivenumber"
+                //    },
+                //    negative: {
+                //        name: "Negative",
+                //        type: "shortcut",
+                //        shortcut: "number,negativenumber"
+                //    },
+                //    number: {
+                //        name: "Number",
+                //        type: "regex",
+                //        regex: "([+-]?\\\d+(\\\.\\\d*)?([eE][+-]?[0-9]+)?)?",
+                //        message: "Must be a number<!-- data-validator-number-message to override -->"
+                //    },
+                //    integer: {
+                //        name: "Integer",
+                //        type: "regex",
+                //        regex: "[+-]?\\\d+",
+                //        message: "No decimal places allowed<!-- data-validator-integer-message to override -->"
+                //    },
+                //    positivenumber: {
+                //        name: "Positivenumber",
+                //        type: "min",
+                //        min: 0,
+                //        message: "Must be a positive number<!-- data-validator-positivenumber-message to override -->"
+                //    },
+                //    negativenumber: {
+                //        name: "Negativenumber",
+                //        type: "max",
+                //        max: 0,
+                //        message: "Must be a negative number<!-- data-validator-negativenumber-message to override -->"
+                //    },
+                //    required: {
+                //        name: "Required",
+                //        type: "required",
+                //        message: "Este campo es requerido<!-- data-validator-required-message to override -->"
+                //    },
+                //    checkone: {
+                //        name: "Checkone",
+                //        type: "minchecked",
+                //        minchecked: 1,
+                //        message: "Check at least one option<!-- data-validation-checkone-message to override -->"
+                //    }
+                //}
             };
 
             var formatValidatorName = function (name) {
@@ -5769,13 +5769,14 @@
                         },
                         error: function () {
                             // Fail message
-                            $('#success').html("<div class='alert alert-danger'>");
-                            $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                                .append("</button>");
-                            $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
-                            $('#success > .alert-danger').append('</div>');
-                            //clear all fields
-                            $('#contactForm').trigger("reset");
+                            //se comenta para no mostrar el maensaje
+                            //$('#success').html("<div class='alert alert-danger'>");
+                            //$('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            //    .append("</button>");
+                            //$('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                            //$('#success > .alert-danger').append('</div>');
+                            ////clear all fields
+                            //$('#contactForm').trigger("reset");
                         },
                     })
                 },
@@ -14678,20 +14679,20 @@
 
         .nivo-lightbox-theme-default .nivo-lightbox-prev {
             /*background-image: url(prev.png);*/
-            background-image: url(https://lh3.googleusercontent.com/fife/AK0iWDwr1jbe0dTK2cRWzkeOqo0fLxr8bnX6oxYeQCOAG6E05qKBF267chQ3rQ9Iv7uQt6T4CHbiWj2VVQI0M_L3aHlC-ePed-MpjiEpgSVXWmSbyIU1PeclKC8EbspIC1borSkl6Qqs3G6LpZNMHfcx9yXzvNbCFA6FIBoS9_2Wq3qwJJVrObVWUizYYbXkQ7a9DAlqIF1ZrL5QYI-C_tA3aakU6br3l1ndoegtrqzo8KjEe8x7yY7xbT0jimQknp2p6B9zdCo06XUqF9W-QNSflWFo0ug7NlMj9udUCTdMqlOBThK_Wh3gcOFr3g1_rHZjl1fEnHCwAY5zfu2zAn9yTJPm5ZM6aWrhsnUhuPL5ojqUuFky7qDkIsZ9nMh22qI1pwFcfX8j4VKiQ9MRcCpIge80gCynNE4l61JgxaGC4VcN3FhBUXknrYmJ1EcotYAaGj_-lhwlHFVU68jiC9h-rMdPSxpwUZRgQfpfq9cGgBEvXVILiH0WFhN3uJs6Qf-fCBk-1ZLweGN8UeLmQFPjgKDhyFaX6x7llKgitHSXvLLCgCdgLVGEfcjboqk7B74t7Y7AhNtepzswOCFrJFi66Qv5z3FTH7fPCtA5VE6LlBhXip6sWPaA3rvrnlJXS5ZqZ3q4mD30s1lvAssmZ9sg_nXjJyj37lM8mHZ67ZGOhGtGjxOl7ZMD8ypOJw7mZZDWhXYkJ-Z2CIDBkbLRLo7m8yl1bmZjoJBkCL6m_mqQih8PK4lnDm0J3sAubIH_jgy1BVkD-Msswmab53ZkqcmwP5v9pqxox_4angV0OiJAcn_-KIPm95kVkTvk2hLQT_cfmeVKX--ypZKIEZ9g_p8WfI9Mdnt-G2J-RX8T9osc_WOMZxVdvf-yGI-iUofJ3kDvw4cROkslIBBMgX0cgRnZ4F6Be8XA3virawVR11V0ft9K0kIGoFGHembY-y9_Gjpw5idwMof5A2QBdQdoy3r7rQFwCVF8Y87NOi2DSkSOuld2bTO_cC9aq0wR4GtDbpGhaAvOKPMTr-6N2PI9zBOp0YGTak_YuQMeZqoMchjXkQHqD8nuIfze8Z8tkZgqZT6sgYXSz30WP7RAVy3G2MisYkVQyyhCuO6QO2w_8-g40y7ah_kMKNwRQ7Jm7NeM6UOYzOTuUovVXqCgqQRJD5z1EbXnPNZ4Iiw-AwEdfW66Zf0b_CLTty142sgboDsAy-XBs2jNly_69tKH9hbZtYkzS1ZtQIFhduRqengtKl1pNj1B4GdEKmIuepedWPTr8vyqKIMLPjkJgvqJmPM1iF-3dJLg08eXMcJHxzQGa3RDHCBVCqSNcBbYi3yTBU0ptHWSOLSUMRmdl8c3t8yq483R5ufbieuUAsIuNthH7gwCdSFytDz2HYU0vH5_8nvQJNi5WwPCUqwRZa2xHhzaObxavfK_RYdZy_B_aPDcXxJZnFXDFK0xQbAXAwO8sIVpCJIh4rLmtcSDORHuv1Cr5_YbesPzUF_d4NqMAVZeNK63el7iBRri8kYEaMmiGQTRv-ci_K-GUQ9rmMDFkIp8sk1gMneVwxcp4HQkhjylMHfqE_5DrtEffOrS0oiXxAgYpT50VpVrQCaLfi0GvOR855Y=w1920-h923);
+            background-image: url(https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihbXwSJeJ3DV4Cl9aCyMz1lcsPKcg8Ny8T7wKb8XFxEl7RV8OeRPy7U4ndfrRyPQkzFHE5R9zixY4SZypDM_qBIF31hT4A=w1536-h911);
             border-radius: 0 3px 3px 0;
         }
 
         .nivo-lightbox-theme-default .nivo-lightbox-next {
             /*background-image: url(next.png); #############################*/
-            background-image: url(https://lh3.googleusercontent.com/fife/AK0iWDzK-6lgU7a04IoOfyAV0cOgO3IKz561nq4kKfN1qmlsugVf_q9nv7ruZMLlN6zqdTPntW177iUZhc8lopIxne3XoOhxoLGgk9vuQMJs7SXcfW_xBE4PzvdTrj_SFDBQhSqw-n9uoxz2Sd2eAieFWKd7vRxs8tzqcEB3397uWyrppnNATEKBLms8_MOffh1HTZwtCVRsiXXw1FpevU521j66upj56jn7yCh7xTzsyvRNojp59YiaDEK-w3E9lYoWOWI6zGH3SRTsrOqERBQIHkX-hs1jugIVr7GldnpSD2tds_ojcpPGpYhSxfSGnnJnbjv0KYnzhhC7RUWAyNgDRiG-NVdRmEQyT_jcQqxv5FCxUAIz60shHGHPFh2nyZbbmQdFtDPFpTsHrRMUbV24m8WtEkAnQx04nvzza2lYKN48rdCLB61EUv0YPt8UVMG8fRogJr6-ijVtH5reZ-8Rjl5yP2SOvo8KFi-rb74uyXkkaeEjxp5BbWPY4OGeLDxcU7pBnAAyRd3H6DJPt3cCxn7fDCyL7nxW7JImKyoqXztLDzBPsb4c29IgnMLA58UGL6utRE99rwVLDhgHrhr5l05_dvb1T_YdNVgmOmHVRSD3BRh9anz3eijHqqkK3eigB2PKNMgct3BnXE1N_sqZASJxbBzUhH9z8F5BR0-AjwJVyxjdbi1rXho3smseeQ6ruDfGokiv-r5owGzRmecNMsGN37yxL6AuVxnAiQLcB_MS8ToZGI7Z1HgBQctqY1CzvIbgzIbQ1KIGCfcreiyCiW0oBxhM55e8v3ObIf0Blu-esDnTfOhnBHzdLO_Fj1HsUnFJVSuXjz-Tqv6P2YRrkYlvi4F-a4ZZafTgrVBso9aW3XQ5tfjqh7liTigHyvtd1neOlg7pbjsGS26mMNRHC0Fh9LHgz-4s-DZnP2g5vlmojj9NsGYvYIUx4YM7U_PCHkiIhN7L473uevtOHQyTrd2SJ9IN8c9do03PFf38ULCsOMXuImHn_kvznBz7fvu__jIMezC4=w1920-h923);
+            background-image: url(https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpiha08VVxvPnFf92iqXxJFOeJDglEWw98S_yyBi2IkykEfziLJy4HxbtUZ-4gsuOY-pgu9JaY0IB7S50KkCfAXTeDvI0cTg=w1920-h911);
             border-radius: 3px 0 0 3px;
         }
 
         .nivo-lightbox-theme-default .nivo-lightbox-close {
             display: block;
             /*. background: url(close.png) no-repeat 5px 5px;*/
-            background: url(https://lh3.googleusercontent.com/fife/AK0iWDx44PlXALF4Q7CknhBMCKFp9pajhxTR8H_xWfYnIgou-gj9NMiC1paXbKsF38UW3UavqJVN6LoDDUYYR69OpMGjLKXBFgd7A7TLL5O_jl3kg70ywxaKPag657E1HdrFrcvy97ph50ET0NY-sSm-PPg46QyL10QfcxkwvAxeIDVOBnldP4B2leTN1y-bcpujKfpbJXgNnPvjoK-l2pI3wtAlhKJhnz_t0UYuzpqAymeTcNCPJ-21NUSPpT-IvevVzXTQ98NsEai6-MvDj9pTDTDBuX0UVfvjRLFntFtU6li6T-NlcsL9CbSsyDEjCR7Igvdu-oDJX-CeQmj9BA5LOE99XwCa554QvgvN2_CPKGzeEh7Hp-0mw47Aux05PNlYQycCiFT5s3oLITV8-IYtR1l7uxA2iNZt0ddcqnU9GJ7cMoGtanM1FU0w6sYP1ytoPqd9Pk-RDgkNzCPPehA7Rv0LraS7KQtNKbQVKIga7WhnD48hKb5wDpwa4nMODunp216kY4lPbbvfXDVKMIh4CGxZ3hMzFZB0aQrl0_LooHZ9x7vCmL8N5VkDm6GkVU3hJuuSDopon7p2S9NDlYfMCw1IZFuhQw8DDLCQa6f4k98eeY045WyMQJjdf8t0dyF_Qv9hP6qdMh-2-qCOmSXVBnN4ysXthNimNDBvOIh3ijmKiahMP4EItHkIjseHVMrR5fhlXcpjAf7yGtuCwu1arDPx3uV4Y57bT9by3zNG3Wt8TvCz8SgBSuvyKQMH0ZJSI0OYOXmvYqo-YNr8G9xNWbqK3DWjzrwTLQ1nEBzAd0DV3r6vEF379OgrhwG3KzYYWYiscZuPS8gb9nH0LArxTV9-gV16zGhLnOKjK0fbdVL5yemcMUzbZ97VGy8CUIi54flTYfTOoTliGLYH0ll7FyH7JUzyeAJZPFPvf0vd59LQXvWkhY32uIPC8VgT-0R0EVVzKMpADolsNoMzyhV3UVdwC4EQv9MGujGGJYyXTbGRcIacf9tacq3QLEpyWTbdZHK84GS2GDJdOorIV2pnw8Ut3Ao9F9CrX6-KR57I2ms2EyKv0FYqSsjmGyn7bBDLiL1h5FtEz2VC2G0jH-8ekqQMaUo2tnp6-onA1ImcQJFr9dbXTw0ouN7dssTIjN_ndxg7eJDKmcAxkFx0XZGpVBU6pWCUEp7w6e6PEOr-nVBU7IQX4Q4l7iJtSkqFbfQjNsuXvarSPfCqxaeusCgj0-4OFbCWIDW7wyOxpuxRc4PTR2Dh_nMHjk29LcrGRYFRAeXmKF1wzpgHLnBHx5G-gjACKi1wKOUQdscUfbxkXCB7FDOtCvzVsrZ4pihrKmomlhbk1tL054ZK_HXRk61PeHGgw34Q26CsDDSJp5ymAwWnjyni29Ru4bTODQum7i8NVF7BlxwAlb0WuTl617fAcobg_CyYy2E_ZJYPBSujHSgRZnV0Mx1TX2341o8_T2to3_haUIuPZbWSyMObscCnljjknbgsATdhENIOn9LgQ2JrPKB4WLB4_VbSwZvW7jA-TH91gVUhpe91j1U0MxRyPBmGDq7Kf7hLt-gZuTzHFkw-4gfFTLv6gTsqaOpuDZvY0o-FYvFDFRbHN9fEzG2Ksrc) no-repeat 5px 5px;
+            background: url(https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihaIEVWV3pawxCPonNe6HNS3SjiSgCb3MYvg21DNJ0d1P3XOoAlv7vspBMRa1cHuosFpPm-LRaq0HP3E-7aEaESxgk1FAg=w1920-h911) no-repeat 5px 5px;
             width: 16px;
             height: 16px;
             text-indent: -9999px;
@@ -14779,6 +14780,16 @@
         /*############################################################################################################*/
         /* Efecto cartel envio mensaje roto*/
 
+
+        .btn_descolgado {
+            position: relative;
+            transition: all 0.5s ease-in-out;
+        }
+        .eliminado {
+            transform: translateY(100%);
+            opacity: 0;
+            /*transition: all 0.7s ease-in-out;*/
+        }
 
         #descolgado {
             /*font-family: Arial;*/
@@ -19902,6 +19913,10 @@
                 <h2> Enviar un mensaje</h2>
                 <hr>
             </div>
+            <div class="msg_construccion">
+                <h3> En construcción</h3>
+                <hr>
+            </div>
             <div class="col-md-8 col-md-offset-2">
                 <form name="sentMessage" id="contactForm" novalidate>
                     <div class="row">
@@ -19923,16 +19938,18 @@
                         <p class="help-block text-danger"> </p>
                     </div>
                     <div id="success"> </div>
-                    <button id="descolgado" type="submit" class="btn btn-default btn-lg"> Enviar</button>
+                    <div class="btn_descolgado">
+                        <button id="descolgado" type="submit" class="btn btn-default btn-lg"> Enviar</button>
+                    </div>
                 </form>
                 <!--<div class="social">
-                    <ul>
-                        <li> <a href="#"> <i class="fa fa-facebook"> </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-twitter"> </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-dribbble"> </i> </a> </li>
-                        <li> <a href="#"> <i class="fa fa-behance"> </i> </a> </li>
-                    </ul>
-                </div>-->
+            <ul>
+                <li> <a href="#"> <i class="fa fa-facebook"> </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-twitter"> </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-dribbble"> </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-behance"> </i> </a> </li>
+            </ul>
+        </div>-->
             </div>
         </div>
     </div>
@@ -19948,6 +19965,7 @@
 
 
     <script>
+        // EFECTO BOTON CNTACTO DESCOLGADO ###############################################
 
         //let animationPlayed = false;
 
@@ -19960,11 +19978,19 @@
         //        animationPlayed = true;
         //    }
         //}
+        var btn_descolgado = document.querySelector('.btn_descolgado');
         var miElemento = document.getElementById('descolgado');
-
+        var h3Element = document.querySelector('.msg_construccion h3');
+        let contador = 0;
+        let contador2 = 0;
         miElemento.addEventListener('mouseenter', function () {
             miElemento.classList.add('hovered');
-
+            
+            if (contador == 0) {
+                h3Element.textContent = 'Que no funciona!!';
+                contador2++;
+            }
+            
             // Después de un tiempo, elimina la clase para que no se repita
             //setTimeout(function () {
             //    miElemento.classList.remove('hovered');
@@ -19972,9 +19998,36 @@
         });
 
         miElemento.addEventListener('click', function () {
+            contador++;
+            switch (contador) {
+                case 1:
+                    h3Element.textContent = 'Lo vas a romper';
+                    break;
+                case 2:
+                    h3Element.textContent = 'Se rompió';
+                    btn_descolgado.classList.add('eliminado');
+                    // Eliminar el elemento del DOM después de la animación
+                    setTimeout(function () {
+                        btn_descolgado.remove();
+                    }, 500); // 500 milisegundos, igual al tiempo de transición
+                    
+                    break;
+                //case 3:
+                //    h3Element.textContent = 'Me lo vas a romper';
+                //    break;
+                //case 4:
+                //    btn_descolgado.classList.add('eliminado');
+                //    // Eliminar el elemento del DOM después de la animación
+                //    setTimeout(function () {
+                //        btn_descolgado.remove();
+                //    }, 500); // 500 milisegundos, igual al tiempo de transición
+                //    break;
+            }
+
+
             /*alert("Hola, esto es un mensaje de alertaaaaaaaaaa");*/
 
-            miElemento.classList.remove('hovered');
+            //miElemento.classList.remove('hovered');
 
             // Después de un tiempo, elimina la clase para que no se repita
             //setTimeout(function () {
